@@ -1,0 +1,198 @@
+.footer {
+    background-color: #333333a7;
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.footer-col-1 {
+    animation-delay: 0.1s;
+}
+
+.footer-col-2 {
+    animation-delay: 0.2s;
+}
+
+.footer-col-3 {
+    animation-delay: 0.3s;
+}
+
+.footer-col-3 {
+    flex-basis: 15%;
+    min-width: 150px;
+}
+
+.footer-col-3 h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-col-3 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-col-3 li {
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the list item */
+.footer-col-3 li:hover {
+    color: aqua;
+    transform: translateX(5px);
+}
+
+
+.footer-col-4 {
+    animation-delay:
+}
+
+.footer-col-4 {
+    flex-basis: 15%;
+    min-width: 150px;
+}
+
+.footer-col-4 h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-col-4 .links {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.footer-col-4 .links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    /* Allows transform to work on the link */
+}
+.footer-col-4 .links a:hover {
+    color: aqua;
+    transform: translateX(5px);
+}
+
+/* New: Hover effect for the entire list item */
+.footer-col-4 .links li:hover {
+    color: aqua;
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.footer-col-4 .links li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for a subtle animation */
+.footer-col-4 .links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+
+.app-logo img {
+    width: 120px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.app-logo img:hover {
+    transform: scale(1.1);
+}
+
+.newsletter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.newsletter h6 {
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #feb47b;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #ff7e5f;
+    transform: translateY(-2px);
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

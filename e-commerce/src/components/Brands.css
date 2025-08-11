@@ -1,0 +1,67 @@
+/* src/components/Brands/Brands.css */
+.brands {
+    background-color: #f8f8f8;
+    /* Light background for contrast */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.small-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-5 {
+    flex: 1;
+    min-width: 150px;
+    /* Minimum width for responsiveness */
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-5 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.8;
+    /* Slightly faded for a modern look */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for logos */
+.col-5:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.col-5:hover img {
+    opacity: 1;
+    /* Full opacity on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        /* Stack logos on smaller screens */
+        align-items: center;
+    }
+
+    .col-5 {
+        margin: 10px 0;
+        /* Adjust margin for stacked layout */
+    }
+}

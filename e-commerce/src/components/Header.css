@@ -1,0 +1,252 @@
+.header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px 0;
+    animation: gradient-shift 10s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 124px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    position: relative;
+}
+
+#menuItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+#menuItems li {
+    padding: 10px 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fade-in-slide 0.5s forwards;
+}
+
+#menuItems li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#menuItems li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#menuItems li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#menuItems li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fade-in-slide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#menuItems li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#menuItems li a:hover {
+    color: #feb47b;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon span,
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon::before {
+    transform: translateY(-10px);
+}
+
+.menu-icon::after {
+    transform: translateY(10px);
+}
+
+/* New: Subtle animation for the icon on hover */
+.menu-icon:hover span {
+    transform: scale(0.8);
+}
+
+.menu-icon:hover::before {
+    transform: translateY(-10px) rotate(-10deg);
+}
+
+.menu-icon:hover::after {
+    transform: translateY(10px) rotate(10deg);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.col-2 {
+    flex: 1;
+    padding: 20px;
+}
+
+.col-2 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slide-in-left 1s forwards 0.5s;
+}
+
+.col-2 p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slide-in-left 1s forwards 0.8s;
+}
+
+.col-2 .btn{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: pop-in 0.6s forwards 1.2s;
+}
+
+@keyframes slide-in-left {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    display: inline-block;
+    background: #feb47b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+.btn:hover {
+    background: #ff7e5f;
+    
+}
+
+.col-2 img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fade-in-scale 1s forwards 1s, pulse 2s infinite ease-in-out 2s;
+    /* Added pulse animation */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* New keyframe for the pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.col-2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation-play-state: paused;
+    /* Pause the pulsing animation on hover */
+}
+
+@keyframes fade-in-scale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

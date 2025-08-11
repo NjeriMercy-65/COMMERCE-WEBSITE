@@ -1,0 +1,108 @@
+/* Featured Products Container */
+.small-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    /* Dark color for the title */
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #e94560;
+    /* Accent color */
+    margin: 0.5rem auto;
+    /* Center the underline */
+}
+
+/* Row for Product Items */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    /* Space between product items */
+}
+
+/* Product Item Styling */
+.product-item {
+    background: #fff;
+    /* White background for product cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+/* Product Details */
+.product-details {
+    padding: 1.5rem;
+}
+
+.product-details h3 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    /* Dark color for product title */
+    margin: 0.5rem 0;
+}
+
+.product-details p {
+    font-size: 1.2rem;
+    color: #e94560;
+    /* Accent color for price */
+    margin: 0.5rem 0;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.product-rating span {
+    margin-left: 0.5rem;
+    color: #777;
+    /* Gray color for rating text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
