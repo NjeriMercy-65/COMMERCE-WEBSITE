@@ -165,7 +165,7 @@ nav {
     animation: slide-in-left 1s forwards 0.8s;
 }
 
-.col-2 .btn{
+.col-2 .btn {
     opacity: 0;
     transform: scale(0.8);
     animation: pop-in 0.6s forwards 1.2s;
@@ -201,12 +201,12 @@ nav {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    
+    transition: background 0.3s, transform 0.3s ease-in-out;
 }
 
 .btn:hover {
     background: #ff7e5f;
-    
+    transform: translateY(-3px);
 }
 
 .col-2 img {
