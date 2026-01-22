@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Categories from './components/Categories.jsx';
-import FeaturedProducts from './Components/FeaturedProducts.jsx';
+import FeaturedProducts from './components/FeaturedProducts.jsx';
 import LatestProducts from './components/LatestProducts';
 import Offer from './components/Offer.jsx';
 import Testimonials from './components/Testimonials.jsx';
