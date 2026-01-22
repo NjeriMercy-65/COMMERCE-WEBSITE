@@ -6,7 +6,7 @@ import FeaturedProducts from './components/FeaturedProducts.jsx';
 import LatestProducts from './components/LatestProducts';
 import Offer from './components/Offer.jsx';
 import Testimonials from './components/Testimonials.jsx';
-import Brands from './Components/Brands.jsx'
+import Brands from './components/Brands.jsx'
 
 
 import Footer from './components/Footer.jsx';
